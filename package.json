@@ -1,0 +1,18 @@
+{
+  "name": "task2-async-engine",
+  "version": "1.0.0",
+  "description": "Fault-tolerant async data engine using Promise.allSettled with strict TypeScript domain interfaces",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/index.js",
+    "bench:default": "cross-env UV_THREADPOOL_SIZE=4 node dist/index.js",
+    "bench:8": "cross-env UV_THREADPOOL_SIZE=8 node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "cross-env": "^10.1.0",
+    "typescript": "^7.0.2"
+  }
+}
